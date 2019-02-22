@@ -4,7 +4,7 @@ Shader "UI/HealthBar" {
         _Fill ("Fill", float) = 0
     }
     SubShader {
-        Tags { "RenderType"="Opaque" }
+        Tags { "RenderType"="Overlay" }
         LOD 100
 
         Pass {
