@@ -14,7 +14,6 @@ public class Damageable : MonoBehaviour {
     private void OnCollisionEnter(Collision other) {
         // Collision would usually be on another component, putting it all here for simplicity
         float force = other.relativeVelocity.magnitude;
-        Debug.Log(string.Format("Hit with force {0}", force));
         if (force > DamageForceThreshold) {
             CurrentHealth -= (int)((force - DamageForceThreshold) * DamageForceScale);
             CurrentHealth = Mathf.Max(0, CurrentHealth);
